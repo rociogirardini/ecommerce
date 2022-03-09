@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# e-commerce
+Proyecto de sección interactiva para tienda en línea.
+## Objetivo
+
+Proyecto final para curso de React en CoderHouse, a cargo del profesor.
+## Estado del proyecto
+
+En proceso. Con proyección a actualizaciones en la medida en la que se avance en la carrera de FrontEnd en CoderHouse.
+## Link al proyecto
+
+https://rociogirardini.github.io/ecommerce/
+## Propietaria
+
+Rocío de los Milagros Girardini
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
