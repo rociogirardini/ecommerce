@@ -1,7 +1,8 @@
-import logoTRF from '../logoTBF.png'
+import logoTRF from '../logoTRF.png';
+import CartWidget from './CartWidget';
 const NavbarBoots = () =>{
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#"><img className="logo" src={logoTRF}/></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,6 +20,7 @@ const NavbarBoots = () =>{
           <a className="nav-link" href="#">Productos</a>
         </li>
       </ul>
+      <CartWidget/>
     </div>
   </div>
 </nav>

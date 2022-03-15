@@ -1,8 +1,39 @@
 .logo{
-  width: 5rem;
+  width: 6rem;
 }
-.navbar-nav.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
+.espacioNavbarLogo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.greeting{
+  display: flex;
+  justify-content: center;
+}
+.barraNavbar{
+  display: flex;
+}
+.espacioNavbarItems{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 3rem;
+  padding-top: 1rem;
+}
+.espacioNavbarLinks{
+  list-style-type: none;
+  display: flex;
+}
+.espacioNavbarLinks a{
+  text-decoration: none;
+  color:rgb(211, 211, 211);
+  padding: 0rem 1rem;
+}
+.espacioNavbarLinks a:hover{
+  color:white;
+}
+.espacioNavbarCarrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

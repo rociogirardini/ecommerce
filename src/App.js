@@ -1,11 +1,13 @@
 import './App.css';
-import NavbarBoots from './components/NavbarBoots';
+import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import PropGreeting from './components/ItemListContainer';
 function App() {
   return (
     <div className="App">
-      <NavbarBoots/>
+      <Navbar/>
+      <PropGreeting props="Ro"/>
     </div>
   );
 }
