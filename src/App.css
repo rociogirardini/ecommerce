@@ -57,3 +57,13 @@
   align-items: center;
   margin-top:1rem;
 }
+.btn__InfoItem{
+  display: flex;
+  justify-content: center;
+  margin-right:auto;
+  margin-left: auto;
+}
+.spaceInfo{
+  display: flex;
+  justify-content: center;
+}
