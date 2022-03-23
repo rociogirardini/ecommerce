@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <Navbar />
       <ItemListContainer nombre="Ro" titulo="Todos los productos" item="Foto Obse"/>
-      <ItemList />
     </div>
   );
 }

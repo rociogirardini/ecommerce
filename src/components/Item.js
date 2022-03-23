@@ -10,11 +10,11 @@ const Item = ({producto}) => {
         };
     return(
         <div className='card' style={{width: '18rem'}}>
-            <img src={img}/>
+            <img src={img} alt="miniatura de cuadro"/>
             <div className='card-body'>
-                <p className='card-text'>{name}</p>
+                <h5 className='card-title'>{name}</h5>
                 <button className="btn btn-info" onClick={verMas}>{show ? 'Ver menos' : 'Ver más'}</button>
-                {show ? <p>{description}</p> : ""}
+                {show ? <p className='card-text'>{description}</p> : ""}
                 <ItemCount initial={0} stock={4}/>
             </div>
         </div>
