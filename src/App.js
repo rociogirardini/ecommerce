@@ -2,13 +2,15 @@ import './App.css';
 import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import PropGreeting from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
+import ItemList from './components/ItemList';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <PropGreeting nombre="Ro" titulo="Cuadros" item="Foto Obse"/>
+      <ItemListContainer nombre="Ro" titulo="Todos los productos" item="Foto Obse"/>
+      <ItemList />
     </div>
   );
 }

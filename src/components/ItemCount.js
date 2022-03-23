@@ -11,6 +11,9 @@ const ItemCount = ({item, initial, stock}) => {
             setContador (contador - 1)
         }
     }
+    const onAdd = () => {
+        console.log('Agregué al carrito')
+    }
     return (
         <div>
             <div className='photoSpace'>
@@ -22,7 +25,7 @@ const ItemCount = ({item, initial, stock}) => {
                 <button className="btn btn-primary" onClick={sumar}>+</button>
             </div>
             <div className="btn__agregarCarrito">
-            <button className='btn btn-outline-primary'>Agregar al carrito</button>
+            <button className='btn btn-outline-primary' onClick={onAdd}>Agregar al carrito</button>
             </div>
         </div>
     );
