@@ -1,21 +1,23 @@
 import logoTRF from '../logoTRF.png';
 import CartWidget from './CartWidget';
+import {Link} from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav className="barraNavbar navbar-dark bg-dark">
             <div className="espacioNavbarLogo col-md-1">
-            <img className="logo" src={logoTRF}/>
+            <Link to="/"><img className="logo" src={logoTRF} alt="logo TRF"/></Link>
             </div>
             <div className="espacioNavbarItems col-md-10">
                 <ul className="espacioNavbarLinks">
                     <li>
-                        <a href="#">Inicio</a>
+                        <Link to="/">Inicio</Link>
                     </li>
                     <li>
-                        <a href="#">Sobre mí</a>
+                        <Link to="/sobre-mi">Sobre mí</Link>
                     </li>
                     <li>
-                        <a href="#">Productos</a>
+                        <Link to="#">Productos</Link>
                     </li>
                 </ul>
             </div>

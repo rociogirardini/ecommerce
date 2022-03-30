@@ -1,34 +1,22 @@
 import React, { useState } from 'react'
 import ItemCount from './ItemCount'
-import ItemDetailContainer from './ItemDetailContainer'
+import {Link} from 'react-router-dom';
 
-const Item = ({ producto }) => {
-    const { id, name, description, img, stock } = producto
+const Item = ({ id, name, description, img, stock }) => {
 
     const [show, setShow] = useState(false)
     const verMas = () => {
         setShow(!show)
     };
 
-    const [detalle, setDetalle] = useState(false)
-    const mostrarDetalle = () => {
-        setDetalle(!detalle)
-    };
-
-    console.log(id);
-
-
     return (
         <div className='card m-3' style={{ width: '18rem'}}>
-            <img src={img} alt="miniatura de cuadro" className='card-img-top'/>
+            <Link to={`/detail/${id}`}><img src={img} alt="miniatura de cuadro" className='card-img-top'/></Link>
             <div className='card-body'>
                 <h5 className='card-title'>{name}</h5>
                 <button className="btn btn-info" onClick={verMas}>{show ? 'Ver menos' : 'Ver más'}</button>
                 {show ? <p className='card-text'>{description}</p> : ""}
-                <button className="btn btn-info m-1" onClick={mostrarDetalle}>Ver detalles</button>
-                <div>
-                    {detalle ? <ItemDetailContainer miid={id}/> : ""}
-                </div>
+                <Link to={`/detail/${id}`}><button className='btn btn-info m-2'>Ver detalles</button></Link>
                 <ItemCount initial={0} stock={stock} />
             </div>
         </div>

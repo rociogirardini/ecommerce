@@ -1,14 +1,25 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import SobreMi from './components/SobreMi';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
-      <ItemListContainer nombre="Ro" titulo="Todos los productos"/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+        <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
+        <Route path='/sobre-mi' element={<SobreMi/>}/>
+        <Route path='*' element={<Navigate to='/'/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
