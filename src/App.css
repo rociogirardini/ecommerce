@@ -37,18 +37,30 @@
   justify-content: center;
   align-items: center;
 }
+.categoryLinks{
+  list-style-type: none;
+  display: flex;
+}
+.categoryLinks a{
+  text-decoration: none;
+  color:rgb(94, 94, 94);
+  padding: 0rem 1rem;
+}
+.categoryLinks a:hover{
+  color:black;
+}
 .countSpace{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
-  width: 15rem;
+  width: 13rem;
   background-color: rgb(221, 221, 221);
   margin-right:auto;
   margin-left: auto;
 }
 .countSpace button{
-  margin: 5rem;
+  margin: 3rem;
 }
 
 .btn__agregarCarrito{
@@ -66,4 +78,9 @@
 .spaceInfo{
   display: flex;
   justify-content: center;
+}
+.btnVolver{
+  color: blueviolet;
+  cursor: pointer;
+  font-size: 1.5rem;
 }

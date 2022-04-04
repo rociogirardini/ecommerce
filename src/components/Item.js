@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import ItemCount from './ItemCount'
 import {Link} from 'react-router-dom';
 
-const Item = ({ id, name, description, img, stock }) => {
+const Item = ({ id, name, description, img, stock}) => {
 
     const [show, setShow] = useState(false)
     const verMas = () => {
@@ -17,7 +16,7 @@ const Item = ({ id, name, description, img, stock }) => {
                 <button className="btn btn-info" onClick={verMas}>{show ? 'Ver menos' : 'Ver más'}</button>
                 {show ? <p className='card-text'>{description}</p> : ""}
                 <Link to={`/detail/${id}`}><button className='btn btn-info m-2'>Ver detalles</button></Link>
-                <ItemCount initial={0} stock={stock} />
+                <small>Quedan {stock} unidades en stock</small>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ const CategoryNavbar = () => {
     return (
         <nav className="barraNavbar navbar-light bg-light">
             <div className="espacioNavbarItems col-md-12">
-                <ul className="espacioNavbarLinks" color='black'>
+                <ul className="categoryLinks">
                     <li>
                         <Link to="/category/paisajes">Paisajes</Link>
                     </li>

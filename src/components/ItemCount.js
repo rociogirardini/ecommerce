@@ -1,31 +1,34 @@
-import { useState } from 'react';
-const ItemCount = ({item, initial, stock}) => {
-    const [contador, setContador] = useState(initial)
-    const sumar = () =>{
-        if(contador < stock){
-            setContador (contador + 1)
+import { Link } from "react-router-dom"
+
+const ItemCount = ({ item, cantidad, setCantidad, stock, onAdd, isInShoppingCart }) => {
+
+    const handleSumar = () => {
+        if (cantidad < stock && setCantidad) {
+            setCantidad(cantidad + 1)
         }
     }
-    const restar = () =>{
-        if (contador > 0){
-            setContador (contador - 1)
+    const handleRestar = () => {
+        if (cantidad > 0 && setCantidad) {
+            setCantidad(cantidad - 1)
         }
     }
-    const onAdd = () => {
-        console.log('Agregué al carrito')
-    }
+
     return (
         <div>
             <div className='photoSpace'>
-            <p>{item}</p>
+                <p>{item}</p>
             </div>
             <div className="countSpace">
-                <button className="btn btn-primary" onClick={restar}>-</button>
-                <p>{contador}</p>
-                <button className="btn btn-primary" onClick={sumar}>+</button>
+                <button className="btn btn-primary" onClick={handleRestar}>-</button>
+                <p>{cantidad}</p>
+                <button className="btn btn-primary" onClick={handleSumar}>+</button>
             </div>
             <div className="btn__agregarCarrito">
-            <button className='btn btn-outline-primary' onClick={onAdd}>Agregar al carrito</button>
+                {
+                    isInShoppingCart
+                        ? <Link to="/cart"> <button className='btn btn-success'>Terminar compra</button></Link>
+                        : <button className='btn btn-outline-primary' onClick={onAdd}>Agregar al carrito</button>
+                }
             </div>
         </div>
     );
