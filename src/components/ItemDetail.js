@@ -2,9 +2,13 @@ import ItemCount from "./ItemCount"
 import Select from "./Select"
 import { useNavigate } from "react-router-dom"
 import { FaArrowCircleLeft } from 'react-icons/fa'
-import { useState } from "react"
+import { useContext, useState } from "react"
+import CartContext from "../context/CartContext"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({ id, name, description, longDescription, img, stock, price, category, options }) => {
+
+    const { addItem, isInCart } = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -14,10 +18,8 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
 
     const [cantidad, setCantidad] = useState(0)
     const [colorMarco, setColorMarco] = useState('natural')
-    const [isInShoppingCart, setIsInShoppingCart] = useState(false)
 
     const agregarAlCarrito = () => {
-        setIsInShoppingCart(true)
         const itemToAdd = {
             id,
             name,
@@ -27,8 +29,7 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
             cantidad,
         }
 
-        console.log(itemToAdd)
-
+        addItem(itemToAdd)
     }
 
     return (
@@ -47,12 +48,17 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
                 /></p>
             </div>
 
-            <ItemCount
-                stock={stock}
-                cantidad={cantidad}
-                setCantidad={setCantidad}
-                isInShoppingCart={isInShoppingCart}
-                onAdd={agregarAlCarrito} />
+            {
+                !isInCart(id)
+                    ? <ItemCount
+                        stock={stock}
+                        cantidad={cantidad}
+                        setCantidad={setCantidad}
+                        onAdd={agregarAlCarrito} />
+                    : <div className="btn__agregarCarrito">
+                        <Link to="/cart"> <button className='btn btn-success'>Terminar compra</button></Link>
+                    </div>
+            }
             <FaArrowCircleLeft className="btnVolver" onClick={handleNavigate} />
         </div>
     )

@@ -37,6 +37,9 @@
   justify-content: center;
   align-items: center;
 }
+.espacioNavbarCarrito a{
+  text-decoration: none;
+}
 .categoryLinks{
   list-style-type: none;
   display: flex;
@@ -83,4 +86,8 @@
   color: blueviolet;
   cursor: pointer;
   font-size: 1.5rem;
+}
+
+.cartQuantity{
+  color: white;
 }

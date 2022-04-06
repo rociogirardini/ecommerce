@@ -1,9 +1,9 @@
 const Select = ({onSelect}) => {
 
     const options = [
-        {value: 'natural', text: 'Natural'},
-        {value: 'negro', text: 'Negro'},
-        {value: 'blanco', text: 'Blanco'},
+        {value: 'Natural', text: 'Natural'},
+        {value: 'Negro', text: 'Negro'},
+        {value: 'Blanco', text: 'Blanco'},
     ]
     
     const handleSelect = (e) => {
