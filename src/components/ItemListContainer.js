@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom'
 import CategoryNavbar from "./CategoryNavbar";
 import { stock } from "./data/stock";
+import Cargando from "./Loading";
 
 const ItemListContainer = () => {
 
@@ -33,10 +34,8 @@ const ItemListContainer = () => {
             <CategoryNavbar />
             {
                 cargando
-                    ? <h2>Cargando...</h2>
-                    : <div>
-                        <ItemList productos={productos} />
-                    </div>
+                    ? < Cargando />
+                    : <ItemList productos={productos} />
             }
         </>
     )

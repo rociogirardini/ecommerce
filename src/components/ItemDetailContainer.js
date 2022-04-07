@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from "./ItemDetail";
 import { stock } from "./data/stock";
+import Cargando from './Loading';
 
 const ItemDetailContainer = () => {
 
@@ -29,7 +30,7 @@ const ItemDetailContainer = () => {
         <div className='container my-5'>
             {
                 cargando
-                    ? <h2>Cargando...</h2>
+                    ? < Cargando />
                     : <ItemDetail {...item} />
             }
         </div>

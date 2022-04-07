@@ -17,7 +17,7 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
     }
 
     const [cantidad, setCantidad] = useState(0)
-    const [colorMarco, setColorMarco] = useState('natural')
+    const [colorMarco, setColorMarco] = useState('Natural')
 
     const agregarAlCarrito = () => {
         const itemToAdd = {
@@ -33,33 +33,43 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
     }
 
     return (
-        <div className="justify-content-center">
-            <h3>{name}</h3>
-            <img src={img} alt={name} />
-            <p>{description}</p>
-            <p>{longDescription}</p>
-            <h5>Precio: ${price}</h5>
-            <p>Quedan {stock} unidades disponibles</p>
-
-            <div>
-                <p>Elegir color del marco: <Select
-                    options={options}
-                    onSelect={setColorMarco}
-                /></p>
+        <div>
+            <div className="row">
+                <div className="col">
+                    <img src={img} alt={name} />
+                </div>
+                <div className="col">
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                    <p>{longDescription}</p>
+                    <p>Elegir color del marco:
+                        <Select
+                            options={options}
+                            onSelect={setColorMarco}
+                        /></p>
+                    <h3>${price}</h3>
+                    {
+                        stock !== 0
+                            ? <div>
+                                <p>Quedan {stock} unidades disponibles</p>
+                                {
+                                    !isInCart(id)
+                                        ? <ItemCount
+                                            stock={stock}
+                                            cantidad={cantidad}
+                                            setCantidad={setCantidad}
+                                            onAdd={agregarAlCarrito} />
+                                        : <div className="agregarCarrito">
+                                            <Link to="/cart"> <button className='btn btn-success'>Terminar compra</button></Link>
+                                        </div>
+                                }
+                            </div>
+                            : <p style={{ color: 'red' }}><strong>¡Llegaste tarde! No hay más unidades</strong></p>
+                    }
+                </div>
             </div>
 
-            {
-                !isInCart(id)
-                    ? <ItemCount
-                        stock={stock}
-                        cantidad={cantidad}
-                        setCantidad={setCantidad}
-                        onAdd={agregarAlCarrito} />
-                    : <div className="btn__agregarCarrito">
-                        <Link to="/cart"> <button className='btn btn-success'>Terminar compra</button></Link>
-                    </div>
-            }
-            <FaArrowCircleLeft className="btnVolver" onClick={handleNavigate} />
+            <FaArrowCircleLeft className="btnAtras m-2" onClick={handleNavigate} />
         </div>
     )
 

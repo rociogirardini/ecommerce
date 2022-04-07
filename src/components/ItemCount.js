@@ -1,4 +1,4 @@
-const ItemCount = ({ item, cantidad, setCantidad, stock, onAdd }) => {
+const ItemCount = ({ cantidad, setCantidad, stock, onAdd }) => {
 
     const handleSumar = () => {
         if (cantidad < stock && setCantidad) {
@@ -13,18 +13,17 @@ const ItemCount = ({ item, cantidad, setCantidad, stock, onAdd }) => {
 
     return (
         <div>
-            <div className='photoSpace'>
-                <p>{item}</p>
+            <div className="countSpace">
+                <button className="btn btnSolid btn-sm" onClick={handleRestar}>-</button>
+                <p className="d-flex align-items-center mt-2">{cantidad}</p>
+                <button className="btn btnSolid btn-sm" onClick={handleSumar}>+</button>
             </div>
-            <div>
-                <div className="countSpace">
-                    <button className="btn btn-primary" onClick={handleRestar}>-</button>
-                    <p>{cantidad}</p>
-                    <button className="btn btn-primary" onClick={handleSumar}>+</button>
-                </div>
-                <div className="btn__agregarCarrito">
-                    <button className='btn btn-outline-primary' onClick={onAdd}>Agregar al carrito</button>
-                </div>
+            <div className="agregarCarrito">
+                <button
+                    className='btn btnOutline'
+                    onClick={onAdd}
+                    disabled={cantidad === 0 ? true : false}
+                >Agregar al carrito</button>
             </div>
         </div>
     );

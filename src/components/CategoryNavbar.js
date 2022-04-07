@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 const CategoryNavbar = () => {
     return (
-        <nav className="barraNavbar navbar-light bg-light">
+        <nav className="navbar-light bg-light">
             <div className="espacioNavbarItems col-md-12">
                 <ul className="categoryLinks">
                     <li>
