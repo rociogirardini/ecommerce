@@ -30,7 +30,7 @@ const Cart = () => {
                             <p>Cantidad: {item.cantidad}</p>
                             <p>Color del marco elegido: {item.colorMarco}</p>
                             <p>Precio por unidad: ${item.price}</p>
-                            <button className="btn btn-danger mb-2" onClick={() => removeItem(item.id)}><FiTrash2 /></button>
+                            <button className="btn btn-danger mb-2" onClick={() => removeItem(item.id, item.colorMarco)}><FiTrash2 /></button>
                         </div>
                         <div className="col d-flex justify-content-end">
                             <img src={item.img} alt={item.name} height="120vh" />

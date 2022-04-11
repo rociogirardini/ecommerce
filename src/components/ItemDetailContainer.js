@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from "./ItemDetail";
-import { stock } from "./data/stock";
 import Cargando from './Loading';
+import { db } from '../firebase/config';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
@@ -12,17 +13,17 @@ const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        const pedirDatos = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(stock), 1000);
-        });
-        setCargando(true);
+        setCargando(true)
 
-        pedirDatos.then((res) => {
-                setItem(res.find((producto) => producto.id === Number(id)))
+        const docRef = doc(db, "productos", id)
+        getDoc(docRef)
+            .then(doc => {
+                setItem( {id: doc.id, ...doc.data()} )
             })
             .finally(() => {
                 setCargando(false)
             })
+
     }, [id])
 
 
@@ -33,8 +34,7 @@ const ItemDetailContainer = () => {
                     ? < Cargando />
                     : <ItemDetail {...item} />
             }
-        </div>
-    )
+        </div>)
 };
 
 export default ItemDetailContainer

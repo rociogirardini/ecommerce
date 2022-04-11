@@ -2,9 +2,9 @@ import {Link} from 'react-router-dom';
 
 const CategoryNavbar = () => {
     return (
-        <nav className="navbar-light bg-light">
+        <nav className="categoryNavbar centrar">
             <div className="espacioNavbarItems col-md-12">
-                <ul className="categoryLinks">
+                <ul className="espacioNavbarLinks">
                     <li>
                         <Link to="/category/paisajes">Paisajes</Link>
                     </li>

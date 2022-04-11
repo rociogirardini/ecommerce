@@ -9,29 +9,41 @@ const Item = ({ id, name, description, img, stock, price }) => {
     };
 
     return (
-        <div className='card m-3' style={{ width: '18rem' }}>
+        <div className="itemCard">
 
-            <Link to={`/detail/${ id }`}>
-                <img src={ img } alt="miniatura de cuadro" className='cardImg card-img-top' />
-            </Link>
-            
-            <div className='card-body'>
-
-                <h5 className='card-title d-flex justify-content-center'>{ name }</h5>
-
-                <p className='d-flex justify-content-center'><strong>${ price }</strong></p>
-
-                <Link to={`/detail/${ id }`}><button className='btn btnSolid m-2'>Comprar</button></Link>
-
-                <button className="btn btnOutline"
-                    onClick={ verMas }>
-                    {show ? 'Ver menos' : 'Ver más'}</button>
-                {show ? <p className='card-text'>{description}</p> : ""}
-
-                <br />
-
-                <small>Quedan { stock } unidades en stock</small>
+            <div className='row'>
+                <h5 className='centrar mt-2 itemCard__title'>{name}</h5>
             </div>
+
+            <div className='row'>
+                <Link to={`/detail/${id}`} className="centrar"><img src={img} alt={`miniatura de ${img}`} className="itemCard__img" /></Link>
+            </div>
+
+            <div className='itemCard__body'>
+                <div className='row'>
+                    <p className='centrar mt-2'><strong>${price}</strong></p>
+                </div>
+
+                <div className='row'>
+                    <div className='col centrar'>
+                        <Link to={`/detail/${id}`}><button className='btn btnSolid'>Comprar</button></Link>
+                    </div>
+                    <div className='col centrar'>
+                        <button className="btn btnOutline"
+                            onClick={verMas}>
+                            {show ? 'Ver menos' : 'Ver más'}</button>
+                    </div>
+                    <div className='row'>
+                        {show ? <p>{description}</p> : ""}
+                    </div>
+
+                    <div className='row mt-2'>
+                        <small>Quedan {stock} unidades en stock</small>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     )
 }

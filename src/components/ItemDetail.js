@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 
 const ItemDetail = ({ id, name, description, longDescription, img, stock, price, category, options }) => {
 
-    const { addItem, isInCart } = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -18,18 +18,20 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
 
     const [cantidad, setCantidad] = useState(0)
     const [colorMarco, setColorMarco] = useState('Natural')
+    const [compra, setCompra] = useState(false)
 
-    const agregarAlCarrito = () => {
+    const agregarAlCarrito = (cantidad) => {
         const itemToAdd = {
             id,
             name,
             price,
             img,
             colorMarco,
-            cantidad,
+            cantidad: cantidad,
         }
 
         addItem(itemToAdd)
+        setCompra(true)
     }
 
     return (
@@ -39,11 +41,10 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
                     <img src={img} alt={name} />
                 </div>
                 <div className="col">
-                    <h2>{name}</h2>
+                    <h2 className="mb-5">{name}</h2>
                     <p>{description}</p>
                     <p>{longDescription}</p>
-                    <p>Elegir color del marco:
-                        <Select
+                    <p>Elegir color del marco: <Select
                             options={options}
                             onSelect={setColorMarco}
                         /></p>
@@ -53,14 +54,15 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
                             ? <div>
                                 <p>Quedan {stock} unidades disponibles</p>
                                 {
-                                    !isInCart(id)
+                                    !compra
                                         ? <ItemCount
                                             stock={stock}
                                             cantidad={cantidad}
                                             setCantidad={setCantidad}
                                             onAdd={agregarAlCarrito} />
                                         : <div className="agregarCarrito">
-                                            <Link to="/cart"> <button className='btn btn-success'>Terminar compra</button></Link>
+                                            <Link to="/cart"> <button className='btn btn-success m-1'>Terminar compra</button></Link>
+                                            <Link to="/"> <button className='btn btn-success m-1'>Seguir comprando</button></Link>
                                         </div>
                                 }
                             </div>

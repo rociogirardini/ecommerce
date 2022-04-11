@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom';
 import CategoryNavbar from "./CategoryNavbar";
-import { stock } from "./data/stock";
 import Cargando from "./Loading";
+import { FaArrowCircleLeft } from 'react-icons/fa';
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../firebase/config";
+
 
 const ItemListContainer = () => {
 
@@ -13,31 +16,30 @@ const ItemListContainer = () => {
     const { categoryId } = useParams()
 
     useEffect(() => {
-        const pedirDatos = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(stock), 2000);
-        });
         setCargando(true);
 
-        pedirDatos.then((resp) => {
-            if (categoryId) {
-                setProductos(resp.filter((el) => el.category === categoryId))
-            } else {
-                setProductos(resp)
-            }
-        })
-            .catch((error) => console.log(error))
-            .finally(() => setCargando(false))
+        const productosRef = collection(db, "productos")
+        const q = categoryId ? query(productosRef, where('category', '==', categoryId)) : productosRef
+        getDocs(q)
+            .then(resp => {
+                const items = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+                setProductos(items)
+            })
+            .finally(() => {
+                setCargando(false)
+            })
     }, [categoryId])
 
     return (
-        <>
+        <div>
             <CategoryNavbar />
             {
                 cargando
-                    ? < Cargando />
+                    ? <Cargando />
                     : <ItemList productos={productos} />
             }
-        </>
+            <Link to="#"><FaArrowCircleLeft className="btnAtras m-2" /></Link>
+        </div>
     )
 }
 export default ItemListContainer;

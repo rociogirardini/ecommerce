@@ -1,59 +1,89 @@
-.logo{
+/* color alternativo: 034e82 */
+
+#root, html{
+  background-color: rgb(33, 33, 33);
+  color: white
+}
+
+.logo {
   width: 22vh;
 }
-.generalNavbar{
+
+.centrar {
   display: flex;
-  height: 15vh;
-  background-color: rgb(34, 34, 34);
-}
-.espacioNavbarLogo{
-  display:flex;
   justify-content: center;
   align-items: center;
 }
-.greeting{
+
+.generalNavbar {
+  display: flex;
+  height: 15vh;
+  background-color: rgb(85, 85, 85);
+}
+
+.espacioNavbarLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting {
   display: flex;
   justify-content: center;
 }
-.espacioNavbarItems{
+
+.espacioNavbarItems {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   padding-top: 1rem;
 }
-.espacioNavbarLinks{
+
+.espacioNavbarLinks {
   list-style-type: none;
   display: flex;
 }
-.espacioNavbarLinks a{
+
+.espacioNavbarLinks a {
   text-decoration: none;
-  color:rgb(211, 211, 211);
+  color: rgb(211, 211, 211);
   padding: 0rem 1rem;
 }
-.espacioNavbarLinks a:hover{
-  color:white;
+
+.espacioNavbarLinks a:hover {
+  color: white;
 }
-.espacioNavbarCarrito{
+
+.espacioNavbarCarrito {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.espacioNavbarCarrito a{
+
+.espacioNavbarCarrito a {
   text-decoration: none;
 }
-.categoryLinks{
+
+.categoryNavbar {
+  background-color: grey;
+}
+
+.categoryLinks {
   list-style-type: none;
   display: flex;
 }
-.categoryLinks a{
+
+.categoryLinks a {
   text-decoration: none;
-  color:rgb(94, 94, 94);
+  color: rgb(94, 94, 94);
   padding: 0rem 1rem;
 }
-.categoryLinks a:hover{
-  color:black;
+
+.categoryLinks a:hover {
+  color: black;
 }
-.countSpace{
+
+.countSpace {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,69 +91,112 @@
   width: 8rem;
   background-color: rgb(221, 221, 221);
   border-radius: 8%;
-  margin-right:auto;
+  margin-right: auto;
   margin-left: auto;
 }
-.countSpace button{
+
+.countSpace button {
   margin: 3vh;
 }
 
-.agregarCarrito{
+.agregarCarrito {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
-.btn__InfoItem{
+
+.btn__InfoItem {
   display: flex;
   justify-content: center;
-  margin-right:auto;
+  margin-right: auto;
   margin-left: auto;
 }
-.spaceInfo{
+
+.spaceInfo {
   display: flex;
   justify-content: center;
 }
-.btnAtras{
-  color: blueviolet;
+
+.btnAtras {
+  color: #034e82;
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-.btnOutline{
-  color:blueviolet;
-  border-color: blueviolet;
+.btnOutline {
+  color: white;
+  border-color: white;
 }
 
-.btnOutline:hover{
-  color:white;
-  background-color: blueviolet;
-  border-color: blueviolet;
+.btnOutline:hover {
+  color: white;
+  background-color: #034e82;
+  border-color: #034e82;
 }
 
-.btnSolid{
-  background-color: blueviolet;
-  border-color: blueviolet;
-  color:white
+.btnSolid {
+  background-color: #034e82;
+  border-color: #034e82;
+  color: white
 }
 
-.btnSolid:hover{
-  background-color: rgb(117, 34, 194);
-  border-color: rgb(117, 34, 194);
-  color:white
+.btnSolid:hover {
+  background-color: #02385f;
+  border-color: #02385f;
+  color: white
 }
 
-.cartQuantity{
+.cartQuantity {
   color: white;
 }
 
-.cardImg{
-  border-bottom: 3px solid blueviolet;
+.itemCard {
+  width: 16rem;
+  margin: 2vh;
+  border-radius: 5%;
+  box-shadow: -7px 6px 8px black;
+  background-color: rgb(85, 85, 85);
 }
 
-.loadingBackground{
+.itemCard__title {
+  color: rgb(228, 228, 228)
+}
+
+.itemCard__img {
+  width: 20vh;
+  margin: 5vh;
+}
+
+.itemCard__body {
+  border-top: 3px solid #034e82;
+  margin: 2vh;
+  color: rgb(228, 228, 228)
+}
+
+.loadingBackground {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh ;
+  height: 80vh;
+}
+
+.itemList {
+  position: relative;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+}
+
+.itemList__title {
+  position: absolute;
+  color: #022c4b83;
+  font-size: 25vh;
+}
+
+.itemList__subtitle {
+  position: absolute;
+  color: white;
+  font-size: 8vh;
+  margin: 5vh 0vh 0vh 4vh;
 }
