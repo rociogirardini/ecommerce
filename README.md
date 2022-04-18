@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/rociogirardini/ecommerce/">
-    <img src="./logoTRF.png" alt="Logo" height="80">
+    <img src="./src/logoTRF.png" alt="Logo" height="80">
   </a>
 
 <h3 align="center">E-commerce</h3>
@@ -25,19 +25,19 @@
   <summary>Tabla de contenidos</summary>
   <ol>
     <li>
-      <a href="#sobre-el-proyecto">Sobre el projecto</a>
+      <a href="#sobre-el-proyecto">Sobre el proyecto</a>
       <ul>
         <li><a href="#desarrollado-con">Desarrollado con</a></li>
       </ul>
     </li>
-    <li><a href="estado-del-proyecto">Estado del proyecto</li>
+    <li><a href="estado-del-proyecto">Estado del proyecto</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="#available-scripts">Available Scripts (React Js)</li>
+    <li><a href="#available-scripts">Available Scripts (React Js)</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## Sobre el projecto
+## Sobre el proyecto
 
 <img src="./public/media/project_preview.png" alt="Project preview">
 
