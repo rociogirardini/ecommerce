@@ -61,8 +61,8 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
                                             setCantidad={setCantidad}
                                             onAdd={agregarAlCarrito} />
                                         : <div className="agregarCarrito">
-                                            <Link to="/cart"> <button className='btn btn-success m-1'>Terminar compra</button></Link>
-                                            <Link to="/"> <button className='btn btn-success m-1'>Seguir comprando</button></Link>
+                                            <Link to="/cart"> <button className='btn btn-success m-1'>Ir al carrito</button></Link>
+                                            <Link to="/"> <button className='btn btnSolid m-1'>Seguir comprando</button></Link>
                                         </div>
                                 }
                             </div>

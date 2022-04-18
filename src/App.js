@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import SobreMi from './components/SobreMi';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/sobre-mi' element={<SobreMi />} />
           <Route path='*' element={<Navigate to='/' />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

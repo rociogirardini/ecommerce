@@ -13,7 +13,7 @@ const Cart = () => {
             <div className="container m-5">
                 <h3>¡Tu carrito está vacío!</h3>
                 <p>Seguí mirando nuestros productos</p>
-                <Link to="/"><button className="btn btnSolid"> Volver <FaArrowCircleLeft /> </button></Link>
+                <Link to="/"><button className="btn btnSolid"><FaArrowCircleLeft /> Volver </button></Link>
             </div>
         )
     } else {
@@ -43,7 +43,8 @@ const Cart = () => {
             <h3>Total: ${cartTotal()}</h3>
             <div className="row">
                 <div className="col d-flex justify-content-end">
-                    <button className="btn btn-danger" onClick={emptyCart}>Limpiar carrito</button>
+                    <button className="btn btn-danger m-1" onClick={emptyCart}>Limpiar carrito</button>
+                    <Link to="/checkout" className="btn btn-success m-1"> Terminar compra</Link>
                 </div>
             </div>
             </div>

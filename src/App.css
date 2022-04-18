@@ -191,7 +191,7 @@
 .itemList__title {
   position: absolute;
   color: #022c4b83;
-  font-size: 25vh;
+  font-size: 20vh;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-style: italic;
@@ -200,8 +200,8 @@
 .itemList__subtitle {
   position: absolute;
   color: white;
-  font-size: 8vh;
-  margin: 5vh 0vh 0vh 4vh;
+  font-size: 10vh;
+  margin: 5vh 0vh 5vh 4vh;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
 }
