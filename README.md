@@ -1,22 +1,72 @@
-# e-commerce
-Proyecto de sección interactiva para tienda en línea.
-## Objetivo
+<div id="top"></div>
 
-Proyecto final para curso de React en CoderHouse, a cargo del profesor.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/rociogirardini/ecommerce/">
+    <img src="./logoTRF.png" alt="Logo" height="80">
+  </a>
+
+<h3 align="center">E-commerce</h3>
+
+  <p align="center">
+    Proyecto de tienda en línea utilizando React Js.
+    <br />
+    <a href="https://rociogirardini.github.io/ecommerce/">Ver Demo</a>
+    <br />
+    <a href="https://github.com/rociogirardini/"><strong>Ver otros proyectos »</strong></a>
+    <br />
+    <br />
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Tabla de contenidos</summary>
+  <ol>
+    <li>
+      <a href="#sobre-el-proyecto">Sobre el projecto</a>
+      <ul>
+        <li><a href="#desarrollado-con">Desarrollado con</a></li>
+      </ul>
+    </li>
+    <li><a href="estado-del-proyecto">Estado del proyecto</li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#available-scripts">Available Scripts (React Js)</li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## Sobre el projecto
+
+<img src="./public/media/project_preview.png" alt="Project preview">
+
+
+
+### Desarrollado con
+
+* [React Js](https://es.reactjs.org/)
+* JavaScript
+* HTML
+* CSS
+* [Bootstrap](https://getbootstrap.com)
+
+<!-- STATUS  -->
+
 ## Estado del proyecto
 
 En proceso. Con proyección a actualizaciones en la medida en la que se avance en la carrera de FrontEnd en CoderHouse.
-## Link al proyecto
 
-https://rociogirardini.github.io/ecommerce/
-## Propietaria
+<!-- CONTACT -->
+## Contacto
 
-Rocío de los Milagros Girardini
+Rocío de los Milagros Girardini - [@Linkedin](https://www.linkedin.com/in/rocio-girardini/) - rogirardini@gmail.com
 
-## Getting Started with Create React App
+Link del projecto: [https://rociogirardini.github.io/ecommerce/](https://rociogirardini.github.io/ecommerce/)
+<br />
+Link del repositorio: [https://github.com/rociogirardini/ecommerce](https://github.com/rociogirardini/ecommerce)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+<!-- MORE ABOUT REACT JS-->
 ## Available Scripts
 
 In the project directory, you can run:
@@ -54,32 +104,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#top">back to top</a>)</p>
