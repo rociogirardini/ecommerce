@@ -30,7 +30,7 @@
         <li><a href="#desarrollado-con">Desarrollado con</a></li>
       </ul>
     </li>
-    <li><a href="estado-del-proyecto">Estado del proyecto</a></li>
+    <li><a href="#estado-del-proyecto">Estado del proyecto</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#available-scripts">Available Scripts (React Js)</a></li>
   </ol>

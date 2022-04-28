@@ -1,8 +1,10 @@
 /* color alternativo: 034e82 */
 
-#root, html{
+#root,
+html {
   background-color: rgb(33, 33, 33);
-  color: white
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .logo {
@@ -138,13 +140,13 @@
 .btnSolid {
   background-color: #034e82;
   border-color: #034e82;
-  color: white
+  color: white;
 }
 
 .btnSolid:hover {
   background-color: #02385f;
   border-color: #02385f;
-  color: white
+  color: white;
 }
 
 .cartQuantity {
@@ -159,19 +161,19 @@
   background-color: rgb(85, 85, 85);
 }
 
-.itemCard__title {
-  color: rgb(228, 228, 228)
+.itemCardTitle {
+  color: rgb(228, 228, 228);
 }
 
-.itemCard__img {
+.itemCardImg {
   width: 20vh;
   margin: 5vh;
 }
 
-.itemCard__body {
+.itemCardBody {
   border-top: 3px solid #034e82;
   margin: 2vh;
-  color: rgb(228, 228, 228)
+  color: rgb(228, 228, 228);
 }
 
 .loadingBackground {
@@ -188,20 +190,52 @@
   align-items: center;
 }
 
-.itemList__title {
+.itemListTitle {
   position: absolute;
   color: #022c4b83;
   font-size: 20vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
-.itemList__subtitle {
+.itemListSubtitle {
   position: absolute;
   color: white;
   font-size: 10vh;
   margin: 5vh 0vh 5vh 4vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
+}
+
+.alertText {
+  background-color: white;
+  color: rgb(68, 68, 68);
+  padding: 4vh;
+  width: fit-content;
+  box-shadow: 5px 5px 3px rgb(63, 63, 63);
+  border-left: solid 5px yellow;
+}
+
+.orderId {
+  background-color: white;
+  color: rgb(68, 68, 68);
+  padding: 4vh;
+  width: fit-content;
+  margin-left: 40%;
+  border-radius: 5%;
+}
+
+.myInfoMain{
+  border-bottom: solid 2px white;
+}
+
+.myInfoTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8vh;
+}
+
+.navbarActive{
+  color:yellow
 }

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import CategoryNavbar from "./CategoryNavbar";
 import Cargando from "./Loading";
-import { FaArrowCircleLeft } from 'react-icons/fa';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/config";
 
@@ -38,7 +37,6 @@ const ItemListContainer = () => {
                     ? <Cargando />
                     : <ItemList productos={productos} />
             }
-            <Link to="#"><FaArrowCircleLeft className="btnAtras m-2" /></Link>
         </div>
     )
 }

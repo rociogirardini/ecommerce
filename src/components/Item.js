@@ -12,14 +12,14 @@ const Item = ({ id, name, description, img, stock, price }) => {
         <div className="itemCard">
 
             <div className='row'>
-                <h5 className='centrar mt-2 itemCard__title'>{name}</h5>
+                <h5 className='centrar mt-4 itemCardTitle'>{name}</h5>
             </div>
 
             <div className='row'>
-                <Link to={`/detail/${id}`} className="centrar"><img src={img} alt={`miniatura de ${img}`} className="itemCard__img" /></Link>
+                <Link to={`/detail/${id}`} className="centrar"><img src={img} alt={`miniatura de ${img}`} className="itemCardImg" /></Link>
             </div>
 
-            <div className='itemCard__body'>
+            <div className='itemCardBody'>
                 <div className='row'>
                     <p className='centrar mt-2'><strong>${price}</strong></p>
                 </div>

@@ -62,7 +62,7 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
                                             onAdd={agregarAlCarrito} />
                                         : <div className="agregarCarrito">
                                             <Link to="/cart"> <button className='btn btn-success m-1'>Ir al carrito</button></Link>
-                                            <Link to="/"> <button className='btn btnSolid m-1'>Seguir comprando</button></Link>
+                                            <Link to="/productos"> <button className='btn btnSolid m-1'>Seguir comprando</button></Link>
                                         </div>
                                 }
                             </div>

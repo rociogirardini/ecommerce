@@ -13,7 +13,7 @@ const Cart = () => {
             <div className="container m-5">
                 <h3>¡Tu carrito está vacío!</h3>
                 <p>Seguí mirando nuestros productos</p>
-                <Link to="/"><button className="btn btnSolid"><FaArrowCircleLeft /> Volver </button></Link>
+                <Link to="/productos"><button className="btn btnSolid"><FaArrowCircleLeft /> Volver </button></Link>
             </div>
         )
     } else {

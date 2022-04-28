@@ -4,14 +4,18 @@ import { useContext, useState } from "react";
 import { db } from "../firebase/config";
 import {
   addDoc,
+  writeBatch,
+  query,
+  where,
   collection,
   Timestamp,
-  updateDoc,
-  doc,
-  getDoc,
+  getDocs,
+  documentId,
 } from "firebase/firestore";
 import { Navigate, Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
+
+// ---------------------------------------------------
 
 const Checkout = () => {
   const { cart, cartTotal, emptyCart } = useContext(CartContext);
@@ -31,7 +35,7 @@ const Checkout = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newOrder = {
@@ -41,30 +45,60 @@ const Checkout = () => {
       date: Timestamp.fromDate(new Date()),
     };
 
+    const batch = writeBatch(db);
     const ordersRef = collection(db, "orders");
+    const productsRef = collection(db, "productos");
+    const q = query(
+      productsRef,
+      where(
+        documentId(),
+        "in",
+        cart.map((item) => item.id)
+      )
+    );
 
-    cart.forEach((item) => {
-      const docRef = doc(db, "productos", item.id);
+    const products = await getDocs(q);
 
-      getDoc(docRef).then((doc) => {
-        updateDoc(docRef, {
-          stock: doc.data().stock - item.cantidad,
+    const outOfStock = [];
+
+    products.docs.forEach((doc) => {
+      const itemInCart = cart.find((item) => item.id === doc.id);
+
+      if (doc.data().stock >= itemInCart.cantidad) {
+        batch.update(doc.ref, {
+          stock: doc.data().stock - itemInCart.cantidad,
         });
-      });
+      } else {
+        outOfStock.push(itemInCart);
+      }
     });
 
-    addDoc(ordersRef, newOrder).then((doc) => {
-      setOrderId(doc.id);
-      emptyCart();
-    });
+    if (outOfStock.length === 0) {
+      await batch.commit();
+      addDoc(ordersRef, newOrder).then((doc) => {
+        setOrderId(doc.id);
+        emptyCart();
+      });
+    } else {
+      let alerts = document.getElementById("alerts");
+
+      let alertText = document.createElement("p");
+      alertText.className = "alertText";
+      alertText.append(
+        "¡Nos quedamos sin stock de alguno de tus productos! Vuelve a revisar."
+      );
+
+      alerts.append(alertText);
+      setTimeout(() => (alerts.innerText = ""), 4000);
+    }
   };
 
   if (orderId) {
     return (
       <div className="container m-5">
         <h2>¡Tu compra se realizó exitosamente!</h2>
-        <h3>Guardá tu número de compra</h3>
-        <p>{orderId}</p>
+        <h3 className="centrar m-4">Guardá tu número de compra</h3>
+        <p className="orderId">{orderId}</p>
         <Link to="/" className="btn btnSolid">
           {" "}
           <FaArrowCircleLeft /> Volver al inicio
@@ -79,6 +113,7 @@ const Checkout = () => {
   return (
     <div className="container m-5">
       <h2>Terminar tu compra</h2>
+      <div id="alerts"></div>
       <form onSubmit={handleSubmit}>
         <input
           required
@@ -101,14 +136,16 @@ const Checkout = () => {
         <input
           required
           className="form-control my-2"
-          type="number"
+          type="tel"
           placeholder="Ingresá tu número de teléfono"
           name="phone"
           value={values.phone}
           onChange={handleInputChange}
+          pattern="[0-9]{6,15}"
+          title="El número de teléfono debe contener al menos 6 caracteres. Característica + número"
         />
 
-        <button className=" btn btnSolid" type="submit">
+        <button className="btn btnSolid" type="submit">
           Enviar
         </button>
       </form>

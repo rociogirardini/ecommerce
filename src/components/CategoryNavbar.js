@@ -14,6 +14,9 @@ const CategoryNavbar = () => {
                     <li>
                         <Link to="/category/animales">Animales</Link>
                     </li>
+                    <li>
+                        <Link to="/productos">Todo</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
