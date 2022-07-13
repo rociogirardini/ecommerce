@@ -185,15 +185,15 @@ html {
 
 .itemList {
   position: relative;
-  height: 35vh;
+  height: 20vw;
   display: flex;
   align-items: center;
 }
 
 .itemListTitle {
   position: absolute;
-  color: #022c4b83;
-  font-size: 20vh;
+  color: #022d4b63;
+  font-size: 10vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-style: italic;
@@ -202,7 +202,7 @@ html {
 .itemListSubtitle {
   position: absolute;
   color: white;
-  font-size: 10vh;
+  font-size: 5vw;
   margin: 5vh 0vh 5vh 4vh;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -233,9 +233,27 @@ html {
 .myInfoTitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 8vh;
+  font-size: 50px;
 }
 
 .navbarActive{
   color:yellow
+}
+
+@media (max-width: 530px){
+  .myInfoTitle{
+    font-size: 30px;
+  }
+  .espacioNavbarLogo{
+    display: none
+  }
+  .espacioNavbarItems{
+    display: flex;
+  align-items: center;
+  justify-content: start;
+  }
+
+  .espacioNavbarLinks{
+    display: block;
+  }
 }

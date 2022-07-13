@@ -55,7 +55,7 @@
 
 ## Estado del proyecto
 
-Terminado. Con proyección a actualizaciones en la medida en la que se avance en la carrera de FrontEnd en CoderHouse.
+Terminado.
 
 <!-- CONTACT -->
 ## Contacto
