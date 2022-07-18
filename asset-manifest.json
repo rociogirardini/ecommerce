@@ -1,16 +1,28 @@
 {
   "files": {
     "main.css": "/ecommerce/static/css/main.38940273.css",
-    "main.js": "/ecommerce/static/js/main.5950dc0c.js",
+    "main.js": "/ecommerce/static/js/main.756ae407.js",
     "static/js/787.28cb0dcd.chunk.js": "/ecommerce/static/js/787.28cb0dcd.chunk.js",
+    "static/media/slide2.jpg": "/ecommerce/static/media/slide2.246ec636ad1f8cf0c536.jpg",
+    "static/media/TobiasRodriguez.jpg": "/ecommerce/static/media/TobiasRodriguez.7e349b30c93fcfb1fbf0.jpg",
+    "static/media/Cuadros2.png": "/ecommerce/static/media/Cuadros2.81b386b97beb9b1a5650.png",
+    "static/media/Cuadros3.png": "/ecommerce/static/media/Cuadros3.9d2d66652c286271a2bf.png",
+    "static/media/Cuadros1.png": "/ecommerce/static/media/Cuadros1.83ab09f5635e51ebc472.png",
+    "static/media/Cuadros4.png": "/ecommerce/static/media/Cuadros4.795172db516b04374f8b.png",
+    "static/media/project_preview.png": "/ecommerce/static/media/project_preview.00f7297ad87fc8d330b5.png",
+    "static/media/Cuadros5.png": "/ecommerce/static/media/Cuadros5.1f233280852512c55eae.png",
+    "static/media/slide3.jpg": "/ecommerce/static/media/slide3.4aaf3a852dd4ff54fe0e.jpg",
+    "static/media/slide5.jpg": "/ecommerce/static/media/slide5.3eaee7618df3eff842a2.jpg",
+    "static/media/slide1.jpg": "/ecommerce/static/media/slide1.66be61d874b59aab8fd1.jpg",
+    "static/media/slide4.jpg": "/ecommerce/static/media/slide4.90aa94a4653ab5c7657f.jpg",
     "static/media/logoTRF.png": "/ecommerce/static/media/logoTRF.4f74314a2ec95d774f89.png",
     "index.html": "/ecommerce/index.html",
     "main.38940273.css.map": "/ecommerce/static/css/main.38940273.css.map",
-    "main.5950dc0c.js.map": "/ecommerce/static/js/main.5950dc0c.js.map",
+    "main.756ae407.js.map": "/ecommerce/static/js/main.756ae407.js.map",
     "787.28cb0dcd.chunk.js.map": "/ecommerce/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38940273.css",
-    "static/js/main.5950dc0c.js"
+    "static/js/main.756ae407.js"
   ]
 }
