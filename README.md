@@ -39,7 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
-<img src="./public/media/project_preview.png" alt="Project preview">
+<img src="./components/media/project_preview.png" alt="Project preview">
 
 
 
