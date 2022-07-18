@@ -38,7 +38,7 @@ const ItemDetail = ({ id, name, description, longDescription, img, stock, price,
         <div>
             <div className="row">
                 <div className="col">
-                    <img src={img} alt={name} />
+                    <img src={require(`${img}`)} alt={name} />
                 </div>
                 <div className="col">
                     <h2 className="mb-5">{name}</h2>

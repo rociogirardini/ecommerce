@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { BiStore } from "react-icons/bi";
-
 const SobreMi = () => {
+
   return (
     <div className="container myInfoMain">
       <div className="row m-5">
         <div className="col">
           <img
-            src="./media/TobiasRodriguez.jpg"
+            src={require('./media/TobiasRodriguez.jpg')}
             alt="img Sobre mi"
             className="img img-fluid"
           />

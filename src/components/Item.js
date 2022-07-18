@@ -16,7 +16,7 @@ const Item = ({ id, name, description, img, stock, price }) => {
             </div>
 
             <div className='row'>
-                <Link to={`/detail/${id}`} className="centrar"><img src={img} alt={`miniatura de ${img}`} className="itemCardImg" /></Link>
+                <Link to={`/detail/${id}`} className="centrar"><img src={require(`${img}`)} alt={`miniatura de ${img}`} className="itemCardImg" /></Link>
             </div>
 
             <div className='itemCardBody'>

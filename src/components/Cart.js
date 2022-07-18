@@ -33,7 +33,7 @@ const Cart = () => {
                             <button className="btn btn-danger mb-2" onClick={() => removeItem(item.id, item.colorMarco)}><FiTrash2 /></button>
                         </div>
                         <div className="col d-flex justify-content-end">
-                            <img src={item.img} alt={item.name} height="120vh" />
+                            <img src={require(`${item.img}`)} alt={item.name} height="120vh" />
                         </div>
                         <hr />
                     </div>

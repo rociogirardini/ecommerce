@@ -24,35 +24,35 @@ const Home = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="./media/slide1.jpg"
+              src={require('./media/slide1.jpg')}
               className="d-block w-100"
               alt="imgCarousel"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./media/slide2.jpg"
+              src={require('./media/slide2.jpg')}
               className="d-block w-100"
               alt="imgCarousel"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./media/slide3.jpg"
+              src={require('./media/slide3.jpg')}
               className="d-block w-100"
               alt="imgCarousel"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./media/slide4.jpg"
+              src={require('./media/slide4.jpg')}
               className="d-block w-100"
               alt="imgCarousel"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./media/slide5.jpg"
+              src={require('./media/slide5.jpg')}
               className="d-block w-100"
               alt="imgCarousel"
             />
@@ -90,7 +90,7 @@ const Home = () => {
         <div className="row m-5">
           <div className="col">
             <img
-              src="./media/TobiasRodriguez.jpg"
+              src={require('./media/TobiasRodriguez.jpg')}
               alt="img Sobre mi"
               className="img img-fluid"
             />
